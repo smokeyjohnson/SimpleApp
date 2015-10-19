@@ -18,11 +18,11 @@
         document.addEventListener( 'pause', onPause.bind( this ), false );
         document.addEventListener( 'resume', onResume.bind( this ), false );
         
-        //window.plugins.uniqueDeviceID.get(function (result) {
-       //     uuid = result;
-       // }, function (err) {
-       //     alert(err);
-       // });
+        window.plugins.uniqueDeviceID.get(function (result) {
+            uuid = result;
+        }, function (err) {
+            alert(err);
+        });
 
         // TODO: Cordova has been loaded. Perform any initialization that requires Cordova here.
         pushNotification = window.plugins.pushNotification;
