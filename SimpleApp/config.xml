@@ -16,4 +16,5 @@
   <gap:plugin name="org.apache.cordova.pushplugin" version="0.3.3"/>
   <gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2"/>
   <gap:plugin name="org.apache.cordova.splashscreen" version="2.4.0"/>
+  
 </widget>
