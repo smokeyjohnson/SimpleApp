@@ -14,9 +14,10 @@
   <vs:plugin name="hu.dpal.phonegap.plugins.UniqueDeviceID" version="1.2.0" />
   <vs:plugin name="org.apache.cordova.device" version="0.2.12" />
   <vs:platformSpecificValues />
+
+  <gap:plugin name="hu.dpal.phonegap.plugins.uniquedeviceid" />
+  <gap:plugin name="com.phonegap.plugins.PushPlugin" />
+  <gap:plugin name="org.apache.cordova.splashscreen" />
+  <gap:plugin name="org.apache.cordova.device" />
 </widget>
 
-<gap:plugin name="hu.dpal.phonegap.plugins.uniquedeviceid" />
-<gap:plugin name="com.phonegap.plugins.PushPlugin" />
-<gap:plugin name="org.apache.cordova.splashscreen" />
-<gap:plugin name="org.apache.cordova.device" />
