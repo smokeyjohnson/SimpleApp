@@ -151,6 +151,17 @@
     <Content Include="plugins\com.phonegap.plugins.PushPlugin\src\wp8\PushPlugin.cs" />
     <Content Include="plugins\com.phonegap.plugins.PushPlugin\www\blackberry10\PushPluginProxy.js" />
     <Content Include="plugins\com.phonegap.plugins.PushPlugin\www\PushNotification.js" />
+    <Content Include="plugins\hu.dpal.phonegap.plugins.UniqueDeviceID\.fetch.json" />
+    <Content Include="plugins\hu.dpal.phonegap.plugins.UniqueDeviceID\LICENSE" />
+    <Content Include="plugins\hu.dpal.phonegap.plugins.UniqueDeviceID\plugin.xml" />
+    <Content Include="plugins\hu.dpal.phonegap.plugins.UniqueDeviceID\README.md" />
+    <Content Include="plugins\hu.dpal.phonegap.plugins.UniqueDeviceID\src\android\UniqueDeviceID.java" />
+    <Content Include="plugins\hu.dpal.phonegap.plugins.UniqueDeviceID\src\ios\CDVUniqueDeviceID.h" />
+    <Content Include="plugins\hu.dpal.phonegap.plugins.UniqueDeviceID\src\ios\CDVUniqueDeviceID.m" />
+    <Content Include="plugins\hu.dpal.phonegap.plugins.UniqueDeviceID\src\ios\UICKeyChainStore.h" />
+    <Content Include="plugins\hu.dpal.phonegap.plugins.UniqueDeviceID\src\ios\UICKeyChainStore.m" />
+    <Content Include="plugins\hu.dpal.phonegap.plugins.UniqueDeviceID\src\wp\UniqueDeviceID.cs" />
+    <Content Include="plugins\hu.dpal.phonegap.plugins.UniqueDeviceID\www\uniqueid.js" />
     <Content Include="plugins\org.apache.cordova.inappbrowser\www\inappbrowser.js" />
     <Content Include="plugins\org.apache.cordova.pushplugin\.gitignore" />
     <Content Include="plugins\org.apache.cordova.pushplugin\Example\server\pushADM.js" />
@@ -199,6 +210,7 @@
     <Content Include="scripts\jquery-2.1.4.min.map" />
     <Content Include="scripts\PushNotification.js" />
     <Content Include="scripts\splashscreen.js" />
+    <Content Include="scripts\uniqueid.js" />
     <Folder Include="images\" />
     <Content Include="merges\android\scripts\android2.3-jscompat.js" />
     <Content Include="merges\android\scripts\platformOverrides.js" />

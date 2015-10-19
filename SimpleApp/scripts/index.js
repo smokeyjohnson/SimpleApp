@@ -9,16 +9,25 @@
     document.addEventListener("backbutton", onBackButton.bind(this), false);
 
     var pushNotification;
+    var uuid = 'hjkhjkhj';
+    var baseUrl = 'http://192.168.0.175/';
+    var appkey = 'uk.co.linkinfotec.simpleapp';
 
     function onDeviceReady() {
         // Handle the Cordova pause and resume events
         document.addEventListener( 'pause', onPause.bind( this ), false );
         document.addEventListener( 'resume', onResume.bind( this ), false );
         
+        //window.plugins.uniqueDeviceID.get(function (result) {
+       //     uuid = result;
+       // }, function (err) {
+       //     alert(err);
+       // });
+
         // TODO: Cordova has been loaded. Perform any initialization that requires Cordova here.
         pushNotification = window.plugins.pushNotification;
 
-        if ( device.platform == 'android' || device.platform == 'Android' )
+        if (window.device.platform == 'android' || window.device.platform == 'Android')
         {
             pushNotification.register(
                 successHandler,
@@ -57,6 +66,13 @@
     function successHandler(result) {
         alert('success');
         $("#app-status-ul").append('<li>EVENT -> SUCCESS:' + result + '</li>');
+
+        //register the subscription with the portal
+        $.post(baseUrl + 'umbraco/api/DeviceApi/MobileSubscriptionRegister',
+            '?appkey=' + appkey + '&devicekey=' + uuid + '&devicetype=' + device.platform.toLowerCase() + '&apitoken=' + result + '&isactive=1',
+            function (result) {
+                $("#app-status-ul").append('<li>EVENT -> REGISTER WITH PORTAL:' + result + '</li>');
+            });
     };
 
     function errorHandler(error) {
