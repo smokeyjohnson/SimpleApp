@@ -12,7 +12,7 @@
   <vs:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" />
   <vs:plugin name="com.phonegap.plugins.PushPlugin" version="2.4.0" />
   <vs:platformSpecificValues />
-  <gap:plugin name="org.apache.cordova.splashscreen" />
-  <gap:plugin name="com.phonegap.plugins.PushPlugin" />
+  <gap:plugin name="org.apache.cordova.splashscreen" version="0.3.3"/>
+  <gap:plugin name="com.phonegap.plugins.PushPlugin" version="2.4.0"/>
   
 </widget>

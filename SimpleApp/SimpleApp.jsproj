@@ -110,6 +110,7 @@
     <VisualStudioVersion>12.0</VisualStudioVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="packages.config" />
     <Content Include="plugins\com.phonegap.plugins.PushPlugin\.fetch.json" />
     <Content Include="plugins\com.phonegap.plugins.PushPlugin\Example\server\pushADM.js" />
     <Content Include="plugins\com.phonegap.plugins.PushPlugin\Example\server\pushAPNS.rb" />
@@ -192,6 +193,10 @@
     <Content Include="plugins\org.apache.cordova.pushplugin\www\blackberry10\PushPluginProxy.js" />
     <Content Include="plugins\org.apache.cordova.pushplugin\www\PushNotification.js" />
     <Content Include="scripts\inappbrowser.js" />
+    <Content Include="scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="scripts\jquery-2.1.4.js" />
+    <Content Include="scripts\jquery-2.1.4.min.js" />
+    <Content Include="scripts\jquery-2.1.4.min.map" />
     <Content Include="scripts\PushNotification.js" />
     <Content Include="scripts\splashscreen.js" />
     <Folder Include="images\" />

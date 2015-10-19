@@ -17,12 +17,13 @@
         
         // TODO: Cordova has been loaded. Perform any initialization that requires Cordova here.
         pushNotification = window.plugins.pushNotification;
+
         if ( device.platform == 'android' || device.platform == 'Android' )
         {
             pushNotification.register(
                 successHandler,
                 errorHandler, {
-                    "senderID": "396431166285",
+                    "senderID": "47799401239",
                     "ecb":"onNotificationGCM"
                 });
         }
@@ -54,10 +55,12 @@
     };
 
     function successHandler(result) {
+        alert('success');
         $("#app-status-ul").append('<li>EVENT -> SUCCESS:' + result + '</li>');
     };
 
     function errorHandler(error) {
+        alert('error');
         $("#app-status-ul").append('<li>EVENT -> ERROR:' + error + '</li>');
     };
 
