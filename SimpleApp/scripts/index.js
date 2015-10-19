@@ -20,6 +20,7 @@
         
         window.plugins.uniqueDeviceID.get(function (result) {
             uuid = result;
+            $("#app-status-ul").append('<li> EVENT -> UUID ' + uuid + '</li>');
         }, function (err) {
             alert(err);
         });
@@ -29,14 +30,18 @@
         // TODO: Cordova has been loaded. Perform any initialization that requires Cordova here.
         pushNotification = window.plugins.pushNotification;
 
-        if (window.device.platform == 'android' || window.device.platform == 'Android')
+        if (window.device.platform.toLowerCase() == 'android')
         {
             pushNotification.register(
                 successHandler,
                 errorHandler, {
-                    "senderID": "47799401239",
-                    "ecb":"onNotificationGCM"
+                    senderID: "47799401239",
+                    ecb:"onNotificationGCM"
                 });
+        }
+        else if (window.device.platform.toLowerCase() == 'ios')
+        {
+
         }
 
     };
@@ -44,7 +49,6 @@
     function onBackButton(e) {
         $("#app-status-ul").append('<li>backbutton event received</li>');
 
-        e.preventDefault();
         pushNotification.unregister(successHandler, errorHandler);
         navigator.app.exitApp();
 
@@ -141,11 +145,3 @@
     };
 
 })();
-
-function testApi() {
-    $.post(baseUrl + 'umbraco/api/DeviceApi/MobileSubscriptionRegister/',
-        JSON.stringify({ 'AppKey': appKey, 'DeviceKey': uuid, 'DeviceType': device.platform.toLowerCase(), 'ApiToken': 'dfgfsdfgsdgsdgsdg', 'IsActive': true }),
-        function (result) {
-            $("#app-status-ul").append('<li>EVENT -> REGISTER WITH PORTAL:' + result + '</li>');
-        }, "text/json");
-};
